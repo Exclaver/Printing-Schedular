@@ -15,7 +15,13 @@ const {dashboard,deleteFiles} = require("./routes/dashboard");
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(fileUpload());
-app.use(cors());
+app.use(cors(
+  {
+    origin:"[https://fileshare-frontend.vercel.app]",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  }
+));
 app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Hello, Express!");
