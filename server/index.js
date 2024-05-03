@@ -26,6 +26,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Hello, Expressssssssssss!");
 });
+app.get("/why", (req, res) => {
+  res.send("why");
+});
 app.post('/api/delete', deleteFiles);
 
 app.post("/api/upload", UploadRoute);
