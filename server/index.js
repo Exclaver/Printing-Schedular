@@ -17,7 +17,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(fileUpload());
 app.use(cors(
   {
-    origin:"[https://fileshare-frontend.vercel.app]",
+    origin:"",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   }
