@@ -16,15 +16,18 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(fileUpload());
 app.use(cors(
-  {
-    origin:["https://printing-schedular-zj3o.vercel.app"],
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  }
+  // {
+  //   origin:["https://printing-schedular-zj3o.vercel.app"],
+  //   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  //   credentials: true,
+  // }
 ));
 app.use(express.json());
 app.get("/", (req, res) => {
-  res.send("Hello, Express!");
+  res.send("Hello, Expressssssssssss!");
+});
+app.get("/why", (req, res) => {
+  res.send("why");
 });
 app.post('/api/delete', deleteFiles);
 
